@@ -1,0 +1,841 @@
+{
+	"id": "c49b058f-b389-9c65-02ca-99d3cb6ea795",
+	"name": "Rapport-APIs",
+	"description": "",
+	"order": [
+		"19f4f02a-b52f-f644-9b10-44a0676937ff",
+		"e605438d-d3de-cff9-ad47-17b9f72ab692",
+		"4b2723e5-1f13-960a-3cd8-5e17c89fc834",
+		"ff2ce98c-e85b-f95a-0098-15ea66b6ec3b",
+		"75892df2-0a52-e7e0-e516-b33e37aa985c",
+		"bf9bf797-e198-c36d-04e6-34982aa99916",
+		"1c9a96a2-0d7a-4fdd-c2ab-7d72488a09cf",
+		"589e61df-2033-e2d7-4b3d-409e0c97c4a9",
+		"41d186b2-9e97-93f0-5cc1-c9a1c2b28bf4",
+		"e4e787f4-61d1-5335-59af-7a169220ab56",
+		"e95e2383-547e-cbe9-6b5c-81a1d6b7704b",
+		"e7e81b20-a78d-940c-1340-ee3b84a55e70",
+		"7a261c41-0b89-72a4-1da4-b402ed03dacf",
+		"ba14a2b2-c7ad-4718-533f-12a11e15b026",
+		"d730c0bd-ba69-0424-d2c1-5611db49470b",
+		"c50e938f-b7a8-02c8-1477-55e6d27583e7",
+		"1128737a-ff24-993c-85f9-d126672f69bc",
+		"f32b5b90-fac6-fe44-1e35-bebad83b3fd2",
+		"aed85aba-0806-2f8a-2b81-048287d45655",
+		"13b9210d-c703-5e61-4a6e-293bedd4346f",
+		"2320e62d-3eff-0ae5-5dbb-6b599007ea8a"
+	],
+	"folders": [],
+	"timestamp": 1450895820163,
+	"owner": 0,
+	"remoteLink": "",
+	"public": false,
+	"requests": [
+		{
+			"id": "1128737a-ff24-993c-85f9-d126672f69bc",
+			"headers": "Authorization: Bearer {{access-token}}\n",
+			"url": "http://{{api-server}}/a1/nca/interaction/message/{message_id}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1450897472563,
+			"name": "user-interaction-delete-message",
+			"description": "",
+			"collectionId": "c49b058f-b389-9c65-02ca-99d3cb6ea795",
+			"responses": []
+		},
+		{
+			"id": "13b9210d-c703-5e61-4a6e-293bedd4346f",
+			"headers": "Authorization: Bearer {{access-token}}\n",
+			"url": "http://{{api-server}}/a1/nca/nca/callhistory/{phoneNumber}?pageIndex={numI}&pageSize={numS}&startTimeStamp={yyyy-MM-dd%20HH:mm:ss}&endTimeStamp={yyyy-MM-dd%20HH:mm:ss}&callingParty={callingParty}&calledParty={calledParty}&callType={callType}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1450897815550,
+			"name": "call-history-get",
+			"description": "",
+			"collectionId": "c49b058f-b389-9c65-02ca-99d3cb6ea795",
+			"responses": []
+		},
+		{
+			"id": "19f4f02a-b52f-f644-9b10-44a0676937ff",
+			"headers": "",
+			"url": "http://{{api-server}}/oauth/client_credential/accesstoken?grant_type=client_credentials",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "client_id",
+					"value": "{{client_id}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "client_secret",
+					"value": "{{client_secret}}",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1450904867308,
+			"name": "get-access-token",
+			"description": "",
+			"collectionId": "c49b058f-b389-9c65-02ca-99d3cb6ea795",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 99,
+					"headers": [
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "491",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": "{\n  \"issued_at\" : \"1445878332243\",\n  \"application_name\" : \"cb5ed9e4-d11a-47b2-9f04-cb84d2362105\",\n  \"scope\" : \"\",\n  \"status\" : \"approved\",\n  \"api_product_list\" : \"[NCAPIs]\",\n  \"expires_in\" : \"129599\",\n  \"developer.email\" : \"\",\n  \"token_type\" : \"BearerToken\",\n  \"client_id\" : \"\",\n  \"access_token\" : \"\",\n  \"organization_name\" : \"foundry2\",\n  \"refresh_token_expires_in\" : \"0\",\n  \"refresh_count\" : \"0\"\n}",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"isSample": true,
+					"scrollToResult": true,
+					"runTests": true,
+					"id": "36586c74-60cb-3710-2381-9694355c3ef5",
+					"name": "access-token",
+					"request": {
+						"name": "get-access-token",
+						"description": "",
+						"url": "http://api.atl.foundry.att.com:9001/oauth/client_credential/accesstoken?grant_type=client_credentials",
+						"pathVariables": {},
+						"data": [
+							{
+								"key": "client_id",
+								"value": "",
+								"type": "text",
+								"enabled": true
+							},
+							{
+								"key": "client_secret",
+								"value": "",
+								"type": "text",
+								"enabled": true
+							}
+						],
+						"headers": "",
+						"dataMode": "urlencoded",
+						"method": "POST",
+						"tests": "",
+						"isFromCollection": true,
+						"version": 2
+					}
+				}
+			]
+		},
+		{
+			"id": "1c9a96a2-0d7a-4fdd-c2ab-7d72488a09cf",
+			"headers": "Authorization: Bearer {{access-token}}\nContent-Type: application/json\n",
+			"url": "http://{{api-server}}/a1/nca/subscription/callEvent/{{p1_number}}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1450896669729,
+			"name": "call-event-notification-create",
+			"description": "",
+			"collectionId": "c49b058f-b389-9c65-02ca-99d3cb6ea795",
+			"responses": [],
+			"rawModeData": "{\n    \"addressDirection\": \"Called\", \n    \"criteria\": [\"Busy\", \"CalledNumber\"],\n    \"url\": \"http://12.206.227.79:8080/notification\" \n}"
+		},
+		{
+			"id": "2320e62d-3eff-0ae5-5dbb-6b599007ea8a",
+			"headers": "Authorization: Bearer {{access-token}}\n",
+			"url": "http://{{api-server}}/a1/nca/nca/callhistory/{phonenumber}}?startTimeStamp={yyyy-MM-dd%20HH:mm:ss}&endTimeStamp={yyyy-MM-dd%20HH:mm:ss}&callingParty={callingParty}&calledParty={calledParty}&callType={callType}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1450897804604,
+			"name": "call-history-delete",
+			"description": "",
+			"collectionId": "c49b058f-b389-9c65-02ca-99d3cb6ea795",
+			"responses": []
+		},
+		{
+			"id": "41d186b2-9e97-93f0-5cc1-c9a1c2b28bf4",
+			"headers": "Authorization: Bearer {{access-token}}\n",
+			"url": "http://{{api-server}}/a1/nca/subscription/callEvent/audit/{{phone_number}}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1450896894780,
+			"name": "call-event-subscription-audit",
+			"description": "",
+			"collectionId": "c49b058f-b389-9c65-02ca-99d3cb6ea795",
+			"responses": []
+		},
+		{
+			"id": "4b2723e5-1f13-960a-3cd8-5e17c89fc834",
+			"headers": "Authorization: Bearer {{access-token}}\nContent-Type: application/json\n",
+			"url": "http://{{api-server}}/a1/nca/callcontrol/call/{{p1}}/{{p2}}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1450896230456,
+			"name": "call-control-create",
+			"description": "",
+			"collectionId": "c49b058f-b389-9c65-02ca-99d3cb6ea795",
+			"responses": [],
+			"rawModeData": "{ \"p1_displayName\": \"{{p1_display_name}}\",\n  \"p1_displayAddress\": \"{{p1_display_address}}\",\n  \"announcement\" : \"http://<ur>/ApiTest//ann1.mp3\"\n}\n"
+		},
+		{
+			"id": "589e61df-2033-e2d7-4b3d-409e0c97c4a9",
+			"headers": "Authorization: Bearer {{access-token}}\n",
+			"url": "http://{{api-server}}/a1/nca/subscription/callEvent/{{subscription_id}}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1450896763229,
+			"name": "call-event-subscription-get",
+			"description": "",
+			"collectionId": "c49b058f-b389-9c65-02ca-99d3cb6ea795",
+			"responses": []
+		},
+		{
+			"id": "75892df2-0a52-e7e0-e516-b33e37aa985c",
+			"headers": "Authorization: Bearer {{access-token}}\nContent-Type: application/json\n",
+			"url": "http://{{api-server}}/a1/nca/callcontrol/manage/{{session_id}}?partyNum=4692294719&action=add&participantId=",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1450896577368,
+			"name": "call-control-add-caller",
+			"description": "",
+			"collectionId": "c49b058f-b389-9c65-02ca-99d3cb6ea795",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "7a261c41-0b89-72a4-1da4-b402ed03dacf",
+			"headers": "Authorization: Bearer {{access-token}}\n",
+			"url": "http://{{api-server}}/a1/nca/subscription/callDirection/audit/{{phone_number}}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1450897068654,
+			"name": "call-direction-audit",
+			"description": "",
+			"collectionId": "c49b058f-b389-9c65-02ca-99d3cb6ea795",
+			"responses": []
+		},
+		{
+			"id": "aed85aba-0806-2f8a-2b81-048287d45655",
+			"headers": "Authorization: Bearer {{access-token}}\nContent-Type: application/json\n",
+			"url": "http://{{api-server}}/a1/nca/interaction/message/audio",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1446928514027,
+			"name": "play-media",
+			"description": "",
+			"collectionId": "c49b058f-b389-9c65-02ca-99d3cb6ea795",
+			"responses": [],
+			"rawModeData": "{\n   \"url\": \"http://12.206.227.77:8080/ApiTest//ann1.mp3\",\n   \"sessionId\": \"25246d09-c5b4-43a6-8b42-0a2161605772\",\n   \"partyNumL\": [\"4043957383\"]\n}\n"
+		},
+		{
+			"id": "ba14a2b2-c7ad-4718-533f-12a11e15b026",
+			"headers": "Authorization: Bearer {{access-token}}\n",
+			"url": "http://{{api-server}}/a1/nca/subscription/callDirection/+14692294716@1f0184467",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1446667872485,
+			"name": "call-direction-delete",
+			"description": "",
+			"collectionId": "c49b058f-b389-9c65-02ca-99d3cb6ea795",
+			"responses": []
+		},
+		{
+			"id": "bf9bf797-e198-c36d-04e6-34982aa99916",
+			"headers": "Authorization: Bearer {{access-token}}\nContent-Type: application/json\n",
+			"url": "http://{{api-server}}/a1/nca/callcontrol/manage/{{session_id}}?participantId={{participant_id}}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1450896518608,
+			"name": "call-control-delete",
+			"description": "",
+			"collectionId": "c49b058f-b389-9c65-02ca-99d3cb6ea795",
+			"responses": []
+		},
+		{
+			"id": "c50e938f-b7a8-02c8-1477-55e6d27583e7",
+			"headers": "Authorization: Bearer {{access-token}}\n",
+			"url": "http://{{api-server}}/a1/nca/interaction/message/{message_id}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1450382319903,
+			"name": "user-interaction-get-media-status",
+			"description": "",
+			"collectionId": "c49b058f-b389-9c65-02ca-99d3cb6ea795",
+			"responses": []
+		},
+		{
+			"id": "d730c0bd-ba69-0424-d2c1-5611db49470b",
+			"headers": "Authorization: Bearer {{access-token}}\n",
+			"url": "http://{{api-server}}/a1/nca/interaction/message/message/{type}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1450897362433,
+			"name": "user-interaction-play-media",
+			"description": "",
+			"collectionId": "c49b058f-b389-9c65-02ca-99d3cb6ea795",
+			"responses": [],
+			"rawModeData": "{\n   \"url\": \"http://12.206.227.77:8080/ApiTest//ann1.mp3\",\n   \"sessionId\": \"25246d09-c5b4-43a6-8b42-0a2161605772\",\n   \"partyNumL\": [\"4043957383\"]\n}\n"
+		},
+		{
+			"id": "e4e787f4-61d1-5335-59af-7a169220ab56",
+			"headers": "Authorization: Bearer {{access-token}}\nContent-Type: application/json\n",
+			"url": "http://{{api-server}}/a1/nca/subscription/callEvent/{{subscription_id}}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1450904189311,
+			"name": "call-event-notification-delete",
+			"description": "",
+			"collectionId": "c49b058f-b389-9c65-02ca-99d3cb6ea795",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "e605438d-d3de-cff9-ad47-17b9f72ab692",
+			"headers": "Authorization: Bearer {{access-token}}\nAccept: application/json\n",
+			"url": "http://{{api-server}}/nyhack/imsdata?user=4692294716",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1446928503182,
+			"name": "get-user-credentials",
+			"description": "",
+			"collectionId": "c49b058f-b389-9c65-02ca-99d3cb6ea795",
+			"responses": []
+		},
+		{
+			"id": "e7e81b20-a78d-940c-1340-ee3b84a55e70",
+			"headers": "Authorization: Bearer {{access-token}}\n",
+			"url": "http://{{api-server}}/a1/nca/subscription/callDirection/{{subscription_id}}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1450897002662,
+			"name": "call-direction-get",
+			"description": "",
+			"collectionId": "c49b058f-b389-9c65-02ca-99d3cb6ea795",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 200,
+						"name": "OK",
+						"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+					},
+					"time": 176,
+					"headers": [
+						{
+							"name": "Access-Control-Allow-Headers",
+							"key": "Access-Control-Allow-Headers",
+							"value": "origin, x-requested-with, accept",
+							"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+						},
+						{
+							"name": "Access-Control-Allow-Methods",
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, PUT, POST, DELETE",
+							"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "Access-Control-Max-Age",
+							"key": "Access-Control-Max-Age",
+							"value": "3628800",
+							"description": "Indicates how long the results of a preflight request can be cached in seconds."
+						},
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "406",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Wed, 04 Nov 2015 17:49:15 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Send-Time",
+							"key": "Send-Time",
+							"value": "1446659355311",
+							"description": "Custom header"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "Apache-Coyote/1.1",
+							"description": "A name for the server"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": " \n        {\n            \"subId\": \"+14692294716@1a1b7215\",\n            \"resourceURL\": \"http://api.foundry.att.net:9001/a1/nca/subscription/callDirection/+14692294716@1a1b7215\",\n            \"notifyURL\": \"http://my3pas:8080/dosomething/to/call\",\n        \t\"filter\": {\"criteria\":[\"Busy\",\"NoAnswer\"],\"address\":[\"sip:+14692294716@foundry.att.com\"],\"privateCall\":false,\"addressDirection\":\"Called\"}\n        }\n      ",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"isSample": true,
+					"scrollToResult": true,
+					"runTests": true,
+					"id": "fd4cbd8c-ffd7-ec87-d264-000afa2e13c6",
+					"name": "call-direction-get-response",
+					"request": {
+						"name": "call-direction-get",
+						"description": "",
+						"url": "http://{{api-server}}/a1/nca/subscription/callDirection/+14692294716@1a1b7215",
+						"pathVariables": {},
+						"data": [],
+						"headers": "Authorization: Bearer {{access-token}}\n",
+						"dataMode": "params",
+						"method": "GET",
+						"tests": "",
+						"isFromCollection": true,
+						"version": 2
+					}
+				}
+			]
+		},
+		{
+			"id": "e95e2383-547e-cbe9-6b5c-81a1d6b7704b",
+			"headers": "Authorization: Bearer {{access-token}}\nContent-Type: application/json\n",
+			"url": "http://{{api-server}}/a1/nca/subscription/callDirection/{{phone_number}}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1450896972955,
+			"name": "call-direction-create",
+			"description": "",
+			"collectionId": "c49b058f-b389-9c65-02ca-99d3cb6ea795",
+			"responses": [
+				{
+					"status": "",
+					"responseCode": {
+						"code": 409,
+						"name": "Conflict",
+						"detail": "Indicates that the request could not be processed because of conflict in the request, such as an edit conflict."
+					},
+					"time": 254,
+					"headers": [
+						{
+							"name": "Access-Control-Allow-Headers",
+							"key": "Access-Control-Allow-Headers",
+							"value": "origin, x-requested-with, accept",
+							"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+						},
+						{
+							"name": "Access-Control-Allow-Methods",
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, PUT, POST, DELETE",
+							"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "Access-Control-Max-Age",
+							"key": "Access-Control-Max-Age",
+							"value": "3628800",
+							"description": "Indicates how long the results of a preflight request can be cached in seconds."
+						},
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "711",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Wed, 04 Nov 2015 17:47:48 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Send-Time",
+							"key": "Send-Time",
+							"value": "1446659268399",
+							"description": "Custom header"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "Apache-Coyote/1.1",
+							"description": "A name for the server"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": " \n\t\t{\n\t\t  \"callNotificationSubscriptionList\": {\n\t\t\t\"playAndCollectInteractionSubscription\": [],\n\t\t\t\"recognitionInteractionSubscription\": [],\n\t\t\t\"playAndRecordInteractionSubscription\": [],\n\t\t\t\"callDirectionSubscription\": [{\n        \t\t\"clientCorrelator\":\"112345\",\n                \"resourceURL\": \"http://api.foundry.att.net:9001/a1/nca/subscription/callDirection/+14692294716@1a1b7215\",\n          \t\t\"callbackReference\": {\n                    \"notifyURL\": \"http://my3pas:8080/dosomething/to/call\",\n        \t\t\t\"notificationFormat\": \"JSON\"\n        \t\t},\n          \t\t\"filter\": {\"criteria\":[\"Busy\",\"NoAnswer\"],\"address\":[\"sip:+14692294716@foundry.att.com\"],\"addressDirection\":\"Called\"}\n        \t}]\n          }\n\t\t}\n      ",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"isSample": true,
+					"scrollToResult": true,
+					"runTests": true,
+					"id": "a2bb4094-645d-9fba-9988-5461f1eb4c30",
+					"name": "",
+					"request": {
+						"name": "call-direction-create",
+						"description": "",
+						"url": "http://{{api-server}}/a1/nca/subscription/callDirection/+14692294716",
+						"pathVariables": {},
+						"data": "{\n    \"addressDirection\": \"Called\", \n    \"criteria\": [\"Busy\", \"NoAnswer\"],\n    \"url\": \"http://12.206.227.79:8080/direction\" \n}",
+						"headers": "Authorization: Bearer {{access-token}}\nContent-Type: application/json\n",
+						"dataMode": "raw",
+						"method": "POST",
+						"tests": "",
+						"isFromCollection": true,
+						"version": 2
+					}
+				},
+				{
+					"status": "",
+					"responseCode": {
+						"code": 409,
+						"name": "Conflict",
+						"detail": "Indicates that the request could not be processed because of conflict in the request, such as an edit conflict."
+					},
+					"time": 254,
+					"headers": [
+						{
+							"name": "Access-Control-Allow-Headers",
+							"key": "Access-Control-Allow-Headers",
+							"value": "origin, x-requested-with, accept",
+							"description": "Used in response to a preflight request to indicate which HTTP headers can be used when making the actual request."
+						},
+						{
+							"name": "Access-Control-Allow-Methods",
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, PUT, POST, DELETE",
+							"description": "Specifies the method or methods allowed when accessing the resource. This is used in response to a preflight request."
+						},
+						{
+							"name": "Access-Control-Allow-Origin",
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"name": "Access-Control-Max-Age",
+							"key": "Access-Control-Max-Age",
+							"value": "3628800",
+							"description": "Indicates how long the results of a preflight request can be cached in seconds."
+						},
+						{
+							"name": "Connection",
+							"key": "Connection",
+							"value": "keep-alive",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"name": "Content-Length",
+							"key": "Content-Length",
+							"value": "711",
+							"description": "The length of the response body in octets (8-bit bytes)"
+						},
+						{
+							"name": "Content-Type",
+							"key": "Content-Type",
+							"value": "application/json",
+							"description": "The mime type of this content"
+						},
+						{
+							"name": "Date",
+							"key": "Date",
+							"value": "Wed, 04 Nov 2015 17:47:48 GMT",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"name": "Send-Time",
+							"key": "Send-Time",
+							"value": "1446659268399",
+							"description": "Custom header"
+						},
+						{
+							"name": "Server",
+							"key": "Server",
+							"value": "Apache-Coyote/1.1",
+							"description": "A name for the server"
+						}
+					],
+					"cookies": [],
+					"mime": "",
+					"text": " \n\t\t{\n\t\t  \"callNotificationSubscriptionList\": {\n\t\t\t\"playAndCollectInteractionSubscription\": [],\n\t\t\t\"recognitionInteractionSubscription\": [],\n\t\t\t\"playAndRecordInteractionSubscription\": [],\n\t\t\t\"callDirectionSubscription\": [{\n        \t\t\"clientCorrelator\":\"112345\",\n                \"resourceURL\": \"http://api.foundry.att.net:9001/a1/nca/subscription/callDirection/+14692294716@1a1b7215\",\n          \t\t\"callbackReference\": {\n                    \"notifyURL\": \"http://my3pas:8080/dosomething/to/call\",\n        \t\t\t\"notificationFormat\": \"JSON\"\n        \t\t},\n          \t\t\"filter\": {\"criteria\":[\"Busy\",\"NoAnswer\"],\"address\":[\"sip:+14692294716@foundry.att.com\"],\"addressDirection\":\"Called\"}\n        \t}]\n          }\n\t\t}\n      ",
+					"language": "javascript",
+					"rawDataType": "text",
+					"state": {
+						"size": "normal"
+					},
+					"previewType": "html",
+					"searchResultScrolledTo": -1,
+					"forceNoPretty": false,
+					"write": true,
+					"empty": false,
+					"failed": false,
+					"isSample": true,
+					"scrollToResult": true,
+					"runTests": true,
+					"id": "1f2e0eba-3880-4b0d-dd21-1ed32d80957b",
+					"name": "call-direction-create",
+					"request": {
+						"name": "call-direction-create",
+						"description": "",
+						"url": "http://{{api-server}}/a1/nca/subscription/callDirection/+14692294716",
+						"pathVariables": {},
+						"data": "{\n    \"addressDirection\": \"Called\", \n    \"criteria\": [\"Busy\", \"NoAnswer\"],\n    \"url\": \"http://12.206.227.79:8080/direction\" \n}",
+						"headers": "Authorization: Bearer {{access-token}}\nContent-Type: application/json\n",
+						"dataMode": "raw",
+						"method": "POST",
+						"tests": "",
+						"isFromCollection": true,
+						"version": 2
+					}
+				}
+			],
+			"rawModeData": "{\n    \"addressDirection\": \"Called\", \n    \"criteria\": [\"Busy\", \"CalledNumber\"],\n    \"url\": \"http://12.206.227.79:8080/direction\" \n}"
+		},
+		{
+			"id": "f32b5b90-fac6-fe44-1e35-bebad83b3fd2",
+			"headers": "Authorization: Bearer {{access-token}}\n",
+			"url": "http://{{api-server}}/a1/nca/interaction/{type}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1450897534774,
+			"name": "user-interaction-play-and-collect",
+			"description": "",
+			"collectionId": "c49b058f-b389-9c65-02ca-99d3cb6ea795",
+			"responses": [],
+			"rawModeData": "{\n   \"sessionId\": \"4d68d9b4-2948-409e-9aab-5110f238da14\",\n   \"callPartyL\": [\"5552226808\"],\n   \"playURL\": \"http://myserver/playthisfile/file_001.wav\",\n   \"playFormat\": \"audio\",\n   \"recordFileURL\": \"http://myserver/recorded/files/file_000.wav\",\n   \"maxRecordLength\": 10\n}\n"
+		},
+		{
+			"id": "ff2ce98c-e85b-f95a-0098-15ea66b6ec3b",
+			"headers": "Authorization: Bearer {{access-token}}\nContent-Type: application/json\n",
+			"url": "http://{{api-server}}/a1/nca/callcontrol/info/{{session_id}}?participantId={{participant_id}}",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "GET",
+			"data": [],
+			"dataMode": "params",
+			"version": 2,
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1450896291211,
+			"name": "call-control-get",
+			"description": "",
+			"collectionId": "c49b058f-b389-9c65-02ca-99d3cb6ea795",
+			"responses": []
+		}
+	]
+}
